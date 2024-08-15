@@ -1,0 +1,13 @@
+/* 頁首 */
+.header {
+  height: 126px;
+  padding: 15px 0;
+  background-color: aqua;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
