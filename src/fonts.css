@@ -7,3 +7,75 @@
   font-family: "Outfit";
   src: url(../src/assets/fonts/Outfit-VariableFont_wght.woff2) format('woff2');
 }
+
+@font-face {
+  font-family: "Noto Naskh Arabic";
+  src: url(../src/assets/fonts/NotoNaskhArabic-VariableFont_wght.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url(../src/assets/fonts/NotoSansArabic-VariableFont_wdth\,wght.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "Noto Sans Bengali";
+  src: url(../src/assets/fonts/NotoSansBengali-VariableFont_wdth\,wght.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "Noto Sans Devanagari";
+  src: url(../src/assets/fonts/NotoSansDevanagari-VariableFont_wdth\,wght.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "Noto Sans Hebrew";
+  src: url(../src/assets/fonts/NotoSansHebrew-VariableFont_wdth\,wght.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url(../src/assets/fonts/NotoSansJP-VariableFont_wght.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url(../src/assets/fonts/NotoSansKR-VariableFont_wght.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "Noto Sans Myanmar";
+  src: url(../src/assets/fonts/NotoSansMyanmar-Regular.woff2) format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Noto Sans Myanmar";
+  src: url(../src/assets/fonts/NotoSansMyanmar-Bold.woff2) format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Noto Sans SC";
+  src: url(../src/assets/fonts/NotoSansSC-VariableFont_wght.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url(../src/assets/fonts/NotoSansTC-VariableFont_wght.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "Noto Sans Sinhala";
+  src: url(../src/assets/fonts/NotoSansSinhala-VariableFont_wdth\,wght.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "Noto Sans Tamil";
+  src: url(../src/assets/fonts/NotoSansTamil-VariableFont_wdth\,wght.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url(../src/assets/fonts/NotoSans-VariableFont_wdth\,wght.woff2) format('woff2');
+}

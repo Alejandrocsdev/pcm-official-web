@@ -42,10 +42,17 @@ import { Link } from 'react-router-dom'
 
 // 頁首組件
 function Header() {
+  // 下載按鈕切換
   const [icon, setIcon] = useState('gp')
+  // 手機選單切換
+  const [isOpen, setIsOpen] = useState(false)
 
   const handleIconSelect = (icon) => {
     setIcon(icon)
+  }
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
   }
 
   return (
@@ -105,6 +112,32 @@ function Header() {
               <li className={S.omit}>
                 {/* 一般連結 */}
                 <Link to="/faq">FAQ</Link>
+              </li>
+              <li className={S.more}>
+                {/* 下拉選單(more) */}
+                <div className={S.drop}>
+                  <span>More</span>
+                  <FontAwesomeIcon className={S.arrow} icon={faAngleDown} />
+                  <div className={S.content}>
+                    <ul>
+                      <li>
+                        <Link to="/wallet">Wallet</Link>
+                      </li>
+                      <li>
+                        <Link to="/dapps">Dapps</Link>
+                      </li>
+                      <li>
+                        <Link to="/explorer">Explorer</Link>
+                      </li>
+                      <li>
+                        <Link to="/guild">Guild</Link>
+                      </li>
+                      <li>
+                        <Link to="/faq">FAQ</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </li>
               <li>
                 {/* 下拉選單(language) */}
@@ -168,9 +201,9 @@ function Header() {
                       </li>
                       <li>
                         <div className={S.flag}>
-                          <img src={nepali_png} />
+                          <img className={S.nepali} src={nepali_png} />
                         </div>
-                        <span>नेपाल</span>
+                        <span className={S.nepaliText}>नेपाल</span>
                       </li>
                       <li>
                         <div className={S.flag}>
@@ -230,32 +263,6 @@ function Header() {
                   </div>
                 </div>
               </li>
-              <li className={S.more}>
-                {/* 下拉選單(more) */}
-                <div className={S.drop}>
-                  <span>More</span>
-                  <FontAwesomeIcon className={S.arrow} icon={faAngleDown} />
-                  <div className={S.content}>
-                    <ul>
-                      <li>
-                        <Link to="/wallet">Wallet</Link>
-                      </li>
-                      <li>
-                        <Link to="/dapps">Dapps</Link>
-                      </li>
-                      <li>
-                        <Link to="/explorer">Explorer</Link>
-                      </li>
-                      <li>
-                        <Link to="/guild">Guild</Link>
-                      </li>
-                      <li>
-                        <Link to="/faq">FAQ</Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
               <li>
                 {/* 下拉選單(download) */}
                 <div className={S.download}>
@@ -297,7 +304,11 @@ function Header() {
             <Link className={S.whitepaper} to="/whitepaper">
               Whitepaper
             </Link>
-            <div className={S.mobileMenu}></div>
+            <div className={`${S.mobileMenu} ${isOpen ? S.open : ''}`} onClick={toggleMenu}>
+              <div className={`${S.line} ${S.line1}`}></div>
+              <div className={`${S.line} ${S.line2}`}></div>
+              <div className={`${S.line} ${S.line3}`}></div>
+            </div>
           </div>
         </nav>
       </header>
