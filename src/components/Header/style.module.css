@@ -1,13 +1,296 @@
 /* 頁首 */
 .header {
-  height: 126px;
-  padding: 15px 0;
-  background-color: aqua;
+  height: 88px;
+  padding: 0 32px;
+  background-color: #160042;
+  display: flex;
+  align-items: center;
 }
 
 .nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 左 */
+.navLeft {
+  display: flex;
+}
+
+.logoLink {
+  text-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImg {
+  width: 40px;
+  aspect-ratio: 1/1;
+}
+
+.logoText {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 32px;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* 右 */
+.navRight {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* 一般連結 */
+.menu a {
+  color: #737883;
+  font-weight: 600;
+  transition: color .2s ease-in-out;
+  display: block;
+}
+
+.menu a:hover {
+  color: #6721ff;
+  cursor: pointer;
+}
+
+/* 下拉選單(about) */
+.drop {
+  text-wrap: nowrap;
+  position: relative;
+}
+
+.drop span {
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+.drop span,
+.drop .arrow {
+  color: #737883;
+}
+
+.drop:hover,
+.drop:hover span,
+.drop:hover .arrow {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.drop .content {
+  position: absolute;
+}
+
+.drop .content ul {
+  min-width: 180px;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: hsl(260, 100%, 18%);
+  border-radius: 10px;
+  transform: translateX(-35%);
+  list-style: none;
+  display: none;
+}
+
+.drop:hover .content ul {
+  display: block;
+}
+
+.drop .content ul li {
+  padding: 10px 14px;
+  border-radius: 4px;
+  transition: background-color .2s ease-in-out;
+}
+
+.drop .content ul li:hover {
+  background-color: #3d1888;
+}
+
+.drop .content ul li a {
+  transition: color .2s ease-in-out;
+  color: #737883;
+}
+
+.drop .content ul li:hover a {
+  color: #ffffff;
+}
+
+/* 下拉選單(language) */
+.language .content {
+  right: 0px;
+  display: none;
+}
+
+.language:hover .content {
+  display: grid;
+}
+
+.earthIcon {
+  width: 40px;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.language ul {
+  width: max-content;
+  transform: translateX(0%) !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  right: 0px;
+}
+
+.language li {
+  display: flex;
+  align-items: center;
+}
+
+.flag {
+  margin-right: 10px;
+}
+
+.flag img {
+  width: 30px;
+  height: 20px;
+}
+
+.language li span {
+  font-size: 14px;
+  color: #737883 !important;
+}
+
+.language li:hover span {
+  color: #ffffff !important;
+}
+
+.earthIcon:hover {
+  color: #0f9e05;
+}
+
+/* 下拉選單(more) */
+.more {
+  display: none;
+}
+
+/* 下拉選單(download) */
+.download {
+  position: relative;
+}
+
+.download .phone {
+  width: 40px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.download:hover .phone {
+  color: #FF8E00;
+  cursor: pointer;
+}
+
+.download .content {
+  position: absolute;
+}
+
+.download .content .container {
+  min-width: 200px;
+  margin-top: 15px;
+  padding: 20px;
+  background-color: hsl(260, 100%, 18%);
+  border-radius: 10px;
+  transform: translateX(-40%);
+  list-style: none;
+  display: none;
+  text-align: center;
+}
+
+.download:hover .content .container {
+  display: block;
+}
+
+.qrImg {
+  width: 120px;
+  aspect-ratio: 1/1;
+}
+
+.icons {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between
+}
+
+.downloadIcon {
+  padding: 3px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.downloadIcon img {
+  width: 40px;
+}
+
+.selected {
+  background-color: hsl(259, 41%, 33%);
+}
+
+.moreInfo {
+  padding: 10px;
+  border-radius: 5px;
+  color: #ffffff !important;
+  background-color: #7923CA;
+  transition: .3s !important;
+}
+
+.moreInfo:hover {
+  background-color: #5e1c9c;
+}
+
+.whitepaper {
+  margin-left: 32px;
+  padding: 14px 28px;
+  color: #ffffff;
+  border-radius: 12px;
+  font-weight: 700;
+  background-color: #6236e7;
+  transition: .3s;
+}
+
+.whitepaper:hover {
+  background-color: hsl(255, 79%, 46%);
+}
+
+@media (max-width: 1050px) {
+  .more {
+    display: list-item;
+  }
+
+  .omit {
+    display: none;
+  }
+
+  .whitepaper {
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .menu,
+  .whitepaper {
+    display: none;
+  }
 }

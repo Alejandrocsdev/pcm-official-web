@@ -1,8 +1,9 @@
-// 全域樣式
+// 樣式
 import './global.css'
+import './fonts.css'
 // 鉤子函式
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// 樣式組件
+// 佈局組件
 import Layout from './components/Layout'
 // 頁面
 import Home from './pages/Home'
