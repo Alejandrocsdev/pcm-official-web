@@ -103,7 +103,7 @@ function Header() {
               </li>
               <li className={S.omit}>
                 {/* 一般連結 */}
-                <Link to="/explorer">Explorer</Link>
+                <Link to="/contract">Contract</Link>
               </li>
               <li className={S.omit}>
                 {/* 一般連結 */}
