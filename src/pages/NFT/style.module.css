@@ -1,0 +1,198 @@
+.main {
+  min-height: 100vh;
+  padding-top: 88px;
+  background-color: rgb(0, 0, 0);
+}
+
+.nft {
+  padding: 50px 0;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nft h1 {
+  margin: 0 0 30px 0;
+  font-size: 48px;
+}
+
+.nft .container {
+  display: flex;
+  gap: 100px;
+}
+
+.nft .container .left {
+  position: relative;
+}
+
+.piFind,
+.piLand {
+  width: 600px;
+  aspect-ratio: 1.75/1;
+  border: 2px solid rgb(230, 173, 40);
+  border-radius: 30px;
+}
+
+.zoomIn {
+  padding: 10px;
+  color: gray;
+  font-size: 20px;
+  background-color: transparent;
+  border-radius: 5px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.zoomIn:hover {
+  background-color: #141732;
+}
+
+/* .nft .container .right {} */
+
+.nft .container .right h3 {
+  height: 10%;
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+}
+
+.nft .container .right h3 span {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.nft .container .right p {
+  width: 600px;
+  height: 80%;
+  margin: 0;
+  font-size: 24px;
+  line-height: 2;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.line {
+  height: 2px;
+  margin: 0 30px;
+  background-color: #ffffff;
+}
+
+.zoomBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 34, 67, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+}
+
+.zoom {
+  width: 90%;
+  height: 90%;
+}
+
+.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zoomOut {
+  padding: 10px;
+  color: gray;
+  font-size: 36px;
+  background-color: transparent;
+  border-radius: 5px;
+  position: absolute;
+  right: calc(5% + 30px);
+  bottom: calc(5% + 30px);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.zoomOut:hover {
+  background-color: #141732;
+}
+
+@media (max-width: 1400px) {
+  .piFind,
+  .piLand {
+    width: 500px;
+  }
+
+  .nft .container .right p {
+    width: 500px;
+    font-size: 20px;
+  }
+
+  .nft .container .right h3 {
+    font-size: 24px;
+  }
+
+  .nft .container .right h3 span {
+    font-size: 16px;
+  }
+
+  .nft .container {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .piFind,
+  .piLand {
+    width: 400px;
+  }
+
+  .nft .container .right p {
+    width: 400px;
+    font-size: 16px;
+  }
+
+  .nft .container .right h3 {
+    font-size: 20px;
+  }
+
+  .nft .container .right h3 span {
+    font-size: 14px;
+  }
+
+  .nft .container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .piFind,
+  .piLand {
+    width: 400px;
+  }
+
+  .nft .container .right p {
+    width: 350px;
+    font-size: 16px;
+  }
+
+  .nft .container .right h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .nft .container .right h3 span {
+    font-size: 14px;
+  }
+
+  .nft .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}

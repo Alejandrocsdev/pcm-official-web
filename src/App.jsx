@@ -8,6 +8,7 @@ import Layout from './components/Layout'
 // 頁面
 import Home from './pages/Home'
 import Test from './pages/Test'
+import NFT from './pages/NFT'
 import NotFound from './pages/NotFound'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/test" element={<Test />} />
+            <Route path="/nft" element={<NFT />} />
 
             {/* 錯誤路由 */}
             <Route path="*" element={<NotFound />} />

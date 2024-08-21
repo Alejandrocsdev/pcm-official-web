@@ -103,7 +103,12 @@ function Header() {
               </li>
               <li className={S.omit}>
                 {/* 一般連結 */}
-                <Link to="/contract">Contract</Link>
+                <Link
+                  to="https://optimistic.etherscan.io/token/0xd0cf4de352ac8dcce00bd6b93ee73d3cb272edc3"
+                  target="blank"
+                >
+                  Contract
+                </Link>
               </li>
               <li className={S.omit}>
                 {/* 一般連結 */}
