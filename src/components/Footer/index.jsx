@@ -85,8 +85,8 @@ function Footer() {
             <span>All rights by reserved</span>
           </div>
           <div className={S.right}>
-            <Link className={S.animatedLine} to="/user-agreement" target="blank">
-              Terms of Service
+            <Link className={S.animatedLine} to="/service-terms" target="blank">
+              Service Terms
             </Link>
             <Link className={S.animatedLine} to="/privacy-policy" target="blank">
               Privacy Policy

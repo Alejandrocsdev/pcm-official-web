@@ -1,0 +1,55 @@
+.header {
+  padding: 80px 0;
+  background-color: #13151a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  color: #ffffff;
+  font-size: 60px;
+  font-family: Bold;
+}
+
+.main {
+  padding: 110px 130px;
+  line-height: 2;
+}
+
+.main h1 {
+  text-align: center;
+}
+
+.h3 {
+  font-weight: 700;
+}
+
+.main a:hover {
+  color: #389bfd;
+}
+
+.team {
+  font-weight: 700;
+  text-align: end;
+}
+
+.date {
+  text-align: end;
+}
+
+@media (max-width: 850px) {
+  .main {
+    padding: 70px 90px;
+  }
+}
+
+@media (max-width: 650px) {
+  .main {
+    padding: 30px 50px;
+  }
+
+  .main h1 {
+    text-align: center;
+  }
+}

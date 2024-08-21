@@ -1,0 +1,125 @@
+.header {
+  padding: 80px 0;
+  background-color: #13151a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  color: #ffffff;
+  font-size: 60px;
+  font-family: Bold;
+}
+
+.main {
+  padding: 110px 130px;
+}
+
+.title {
+  margin-bottom: 40px;
+  color: #626262;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: Bold;
+}
+
+.paragraph {
+  margin-bottom: 30px;
+  color: #626262;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: Regular;
+}
+
+.paragraph p {
+  line-height: 25px;
+  font-family: Regular;
+}
+
+.title1 {
+  margin-bottom: 20px;
+  color: #626262;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: Regular;
+}
+
+.ul {
+  padding: 10px 0;
+  padding-left: 45px;
+  box-sizing: border-box;
+  line-height: 25px;
+  list-style: none;
+  font-size: 15px;
+  color: #626262;
+  font-family: Regular;
+  font-weight: 300;
+}
+
+.ul li {
+  list-style: disc;
+}
+
+.paragraph a,
+.ul li a {
+  color: #0059da;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: Regular;
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  left: 2px;
+  cursor: pointer;
+}
+
+.paragraph a:hover,
+.ul li a:hover {
+  color: #389bfd;
+}
+
+.ul li a {
+  display: inline;
+}
+
+.ul li a span {
+  font-family: Regular;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .piFind,
+  .piLand {
+    width: 500px;
+  }
+
+  .nft .container .right p {
+    width: 500px;
+    font-size: 20px;
+  }
+
+  .nft .container .right h3 {
+    font-size: 24px;
+  }
+
+  .nft .container .right h3 span {
+    font-size: 16px;
+  }
+
+  .nft .container {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 850px) {
+  .main {
+    padding: 70px 90px;
+  }
+}
+
+@media (max-width: 650px) {
+  .main {
+    padding: 30px 50px;
+  }
+}
