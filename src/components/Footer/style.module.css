@@ -15,6 +15,7 @@
 
 .partners .up {
   margin-bottom: 50px;
+  text-wrap: nowrap;
   color: #d5c8e6;
 }
 
@@ -211,7 +212,23 @@
 }
 
 @media (max-width: 650px) {
+  .footer {
+    padding: 50px 50px 25px 50px;
+  }
+
+  .partners .down {
+    gap: 20px;
+  }
+  
   .partner {
-    width: 180px;
+    width: 160px;
+  }
+
+  .copyright .left {
+    font-size: 14px;
+  }
+
+  .copyright .right {
+    font-size: 14px;
   }
 }
