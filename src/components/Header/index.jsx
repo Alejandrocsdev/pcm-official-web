@@ -29,6 +29,7 @@ import turkish_png from '../../assets/img/flag/turkish.png'
 import azerbaijani_png from '../../assets/img/flag/azerbaijani.png'
 import burmese_png from '../../assets/img/flag/burmese.png'
 import sinhala_png from '../../assets/img/flag/sinhala.png'
+import spanish_png from '../../assets/img/flag/spanish.png'
 // Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -36,24 +37,38 @@ import {
   faMobileScreenButton,
   faEarthAmericas
 } from '@fortawesome/free-solid-svg-icons'
+// 組件
+import MobileMenu from '../MobileMenu'
 // 鉤子函式
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 // 頁首組件
-function Header() {
+function Header({ isOpen, toggleMenu }) {
   // 下載按鈕切換
   const [icon, setIcon] = useState('gp')
-  // 手機選單切換
-  const [isOpen, setIsOpen] = useState(false)
+  // 螢幕寬度
+  const [vw, setVw] = useState(window.innerWidth)
 
   const handleIconSelect = (icon) => {
     setIcon(icon)
   }
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
+  const handleLinkClick = () => {
+    toggleMenu()
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      setVw(window.innerWidth)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
     <>
@@ -264,6 +279,12 @@ function Header() {
                         </div>
                         <span>සිංහල</span>
                       </li>
+                      <li>
+                        <div className={S.flag}>
+                          <img src={spanish_png} />
+                        </div>
+                        <span>Español</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -297,7 +318,7 @@ function Header() {
                           <img src={android_robot_logo_png} />
                         </div>
                       </div>
-                      <Link className={S.moreInfo} to="/wallet">
+                      <Link className={S.moreInfo} to="/download">
                         More Info
                       </Link>
                     </div>
@@ -309,7 +330,7 @@ function Header() {
             <Link className={S.whitepaper} to="/whitepaper">
               Whitepaper
             </Link>
-            <div className={`${S.mobileMenu} ${isOpen ? S.open : ''}`} onClick={toggleMenu}>
+            <div className={`${S.mobileMenuBtn} ${isOpen ? S.open : ''}`} onClick={toggleMenu}>
               <div className={`${S.line} ${S.line1}`}></div>
               <div className={`${S.line} ${S.line2}`}></div>
               <div className={`${S.line} ${S.line3}`}></div>
@@ -317,6 +338,7 @@ function Header() {
           </div>
         </nav>
       </header>
+      <MobileMenu style={isOpen && vw < 950 ? S.show : ''} onLinkClick={handleLinkClick} />
     </>
   )
 }

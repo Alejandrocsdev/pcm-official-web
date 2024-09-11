@@ -27,7 +27,6 @@ function CookiePolicy() {
           <p>
             For more general information on cookies, see this
             <Link to="https://en.wikipedia.org/wiki/HTTP_cookie">Wikipedia article</Link>.
-            {/* <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Wikipedia article</a>. */}
           </p>
         </div>
         <div className={S.paragraph}>

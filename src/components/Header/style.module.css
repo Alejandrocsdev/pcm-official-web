@@ -291,7 +291,8 @@
   background-color: hsl(255, 79%, 46%);
 }
 
-.mobileMenu {
+/* 選單按鈕 */
+.mobileMenuBtn {
   height: 100%;
   aspect-ratio: 1/1;
   display: flex;
@@ -342,6 +343,11 @@
   display: none;
 }
 
+/* 手機選單 */
+.show {
+  display: block!important;
+}
+
 @media (max-width: 1130px) {
   .more {
     display: list-item;
@@ -374,7 +380,7 @@
     display: none;
   }
 
-  .mobileMenu {
+  .mobileMenuBtn {
     display: flex;
   }
 }
