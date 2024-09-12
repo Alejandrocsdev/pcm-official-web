@@ -1,5 +1,7 @@
 // 模組樣式
 import S from './style.module.css'
+// 鉤子函式
+import { useState } from 'react'
 // PNG 圖檔
 import figure1_png from '../../assets/img/whitepaper/figure1.png'
 import figure2_png from '../../assets/img/whitepaper/figure2.png'
@@ -9,8 +11,23 @@ import figure5_png from '../../assets/img/whitepaper/figure5.png'
 import figure6_png from '../../assets/img/whitepaper/figure6.png'
 import figure7_png from '../../assets/img/whitepaper/figure7.png'
 import figure8_png from '../../assets/img/whitepaper/figure8.png'
+// Font Awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 // 首頁
 function Whitepaper() {
+  const [activeItem, setActiveItem] = useState('#pichain-global-ecosystem')
+
+  const handleItemClick = (item) => {
+    setActiveItem(item)
+  }
+
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <>
       <main className={S.main}>
@@ -1276,22 +1293,22 @@ function Whitepaper() {
               </p>
               <p>
                 Token Documentation: Nothing in this document or the Website constitutes any offer
-                by the Company, the Distributor, or the PCM Team to sell any PCM (as defined
-                herein) nor shall it or any part of it nor the fact of its presentation form the
-                basis of, or be relied upon in connection with, any contract or investment decision.
-                Nothing contained in this document or the Website is or may be relied upon as a
-                promise, representation or undertaking as to the future performance of PiChain
-                Global Ecosystem. The agreement between the Distributor (or any third party) and
-                you, in relation to any distribution or transfer of PCM, is to be governed only by
-                the separate terms and conditions of such agreement.
+                by the Company, the Distributor, or the PCM Team to sell any PCM (as defined herein)
+                nor shall it or any part of it nor the fact of its presentation form the basis of,
+                or be relied upon in connection with, any contract or investment decision. Nothing
+                contained in this document or the Website is or may be relied upon as a promise,
+                representation or undertaking as to the future performance of PiChain Global
+                Ecosystem. The agreement between the Distributor (or any third party) and you, in
+                relation to any distribution or transfer of PCM, is to be governed only by the
+                separate terms and conditions of such agreement.
               </p>
               <p>
                 The information set out in this document and the Website is for community discussion
                 only and is not legally binding. No person is bound to enter into any contract or
-                binding legal commitment in relation to the acquisition of PCM, and no digital
-                asset or other form of payment is to be accepted on the basis of this document or
-                the Website. The agreement for distribution of PCM and/or continued holding of PCM
-                shall be governed by a separate set of Terms and Conditions or Token Distribution
+                binding legal commitment in relation to the acquisition of PCM, and no digital asset
+                or other form of payment is to be accepted on the basis of this document or the
+                Website. The agreement for distribution of PCM and/or continued holding of PCM shall
+                be governed by a separate set of Terms and Conditions or Token Distribution
                 Agreement (as the case may be) setting out the terms of such distribution and/or
                 continued holding of PCM (the “Terms and Conditions”), which shall be separately
                 provided to you or made available on the Website. The Terms and Conditions must be
@@ -1328,13 +1345,13 @@ function Whitepaper() {
                   (e) you acknowledge, understand and agree that you are not eligible to participate
                   in the distribution of PCM if you are a citizen, national, resident (tax or
                   otherwise), domiciliary and/or green card holder of a geographic area or country
-                  (i) where it is likely that the distribution of PCM would be construed as the
-                  sale of a security (howsoever named), financial service or investment product
-                  and/or (ii) where participation in token distributions is prohibited by applicable
-                  law, decree, regulation, treaty, or administrative act (including without
-                  limitation the United States of America and the People's Republic of China); and
-                  to this effect you agree to provide all such identity verification document when
-                  requested in order for the relevant checks to be carried out.
+                  (i) where it is likely that the distribution of PCM would be construed as the sale
+                  of a security (howsoever named), financial service or investment product and/or
+                  (ii) where participation in token distributions is prohibited by applicable law,
+                  decree, regulation, treaty, or administrative act (including without limitation
+                  the United States of America and the People's Republic of China); and to this
+                  effect you agree to provide all such identity verification document when requested
+                  in order for the relevant checks to be carried out.
                 </li>
               </ul>
               <p>
@@ -1351,9 +1368,9 @@ function Whitepaper() {
                 or data) arising from the use of this document or the Website, or any other
                 materials published, or its contents (including without limitation any errors or
                 omissions) or otherwise arising in connection with the same. Prospective acquirors
-                of PCM should carefully consider and evaluate all risks and uncertainties
-                (including financial and legal risks and uncertainties) associated with the
-                distribution of PCM, the Company, the Distributor and the PCM Team.
+                of PCM should carefully consider and evaluate all risks and uncertainties (including
+                financial and legal risks and uncertainties) associated with the distribution of
+                PCM, the Company, the Distributor and the PCM Team.
               </p>
               <p>
                 PCM Token: PCM are designed to be utilised, and that is the goal of the PCM
@@ -1481,76 +1498,213 @@ function Whitepaper() {
           </div>
         </div>
         <div className={S.right}>
-          <ul>
+          <div className={S.mobileAnchor} onClick={toggleMenu}>
+            <div>On this page</div>
+            <div className={isOpen ? S.close : ''}>
+              <FontAwesomeIcon icon={faChevronRight} />
+            </div>
+            <div className={`${S.openedArrow} ${isOpen ? S.open : ''}`}>
+              <FontAwesomeIcon icon={faChevronDown} />
+            </div>
+          </div>
+          <ul className={isOpen ? S.open : ''}>
             <li>
-              <a href="#pichain-global-ecosystem">PiChain Global Ecosystem</a>
+              <a
+                href="#pichain-global-ecosystem"
+                className={activeItem === '#pichain-global-ecosystem' ? S.active : ''}
+                onClick={() => handleItemClick('#pichain-global-ecosystem')}
+              >
+                PiChain Global Ecosystem
+              </a>
             </li>
             <li>
-              <a href="#the-promise-of-cryptocurrency">The promise of cryptocurrency</a>
+              <a
+                href="#the-promise-of-cryptocurrency"
+                className={activeItem === '#the-promise-of-cryptocurrency' ? S.active : ''}
+                onClick={() => handleItemClick('#the-promise-of-cryptocurrency')}
+              >
+                The promise of cryptocurrency
+              </a>
             </li>
             <li>
-              <a href="#the-challenges-facing-web3-ecommerce">
+              <a
+                href="#the-challenges-facing-web3-ecommerce"
+                className={activeItem === '#the-challenges-facing-web3-ecommerce' ? S.active : ''}
+                onClick={() => handleItemClick('#the-challenges-facing-web3-ecommerce')}
+              >
                 The challenges facing Web3 ecommerce
               </a>
             </li>
             <li>
-              <a href="#barriers-to-entry">Barriers to entry</a>
+              <a
+                href="#barriers-to-entry"
+                className={activeItem === '#barriers-to-entry' ? S.active : ''}
+                onClick={() => handleItemClick('#barriers-to-entry')}
+              >
+                Barriers to entry
+              </a>
             </li>
             <li>
-              <a href="#marketplace-barriers">Marketplace barriers</a>
+              <a
+                href="#marketplace-barriers"
+                className={activeItem === '#marketplace-barriers' ? S.active : ''}
+                onClick={() => handleItemClick('#marketplace-barriers')}
+              >
+                Marketplace barriers
+              </a>
             </li>
             <li>
-              <a href="#archaic-web2-standards">Archaic Web2 standards</a>
+              <a
+                href="#archaic-web2-standards"
+                className={activeItem === '#archaic-web2-standards' ? S.active : ''}
+                onClick={() => handleItemClick('#archaic-web2-standards')}
+              >
+                Archaic Web2 standards
+              </a>
             </li>
             <li>
-              <a href="#the-pichain-global-ecosystem-vision">The PiChain Global Ecosystem vision</a>
+              <a
+                href="#the-pichain-global-ecosystem-vision"
+                className={activeItem === '#the-pichain-global-ecosystem-vision' ? S.active : ''}
+                onClick={() => handleItemClick('#the-pichain-global-ecosystem-vision')}
+              >
+                The PiChain Global Ecosystem vision
+              </a>
             </li>
             <li>
-              <a href="#a-new-model-for-trust">A new model for trust</a>
+              <a
+                href="#a-new-model-for-trust"
+                className={activeItem === '#a-new-model-for-trust' ? S.active : ''}
+                onClick={() => handleItemClick('#a-new-model-for-trust')}
+              >
+                A new model for trust
+              </a>
             </li>
             <li>
-              <a href="#breaking-barriers-by-design">Breaking barriers by design</a>
+              <a
+                href="#breaking-barriers-by-design"
+                className={activeItem === '#breaking-barriers-by-design' ? S.active : ''}
+                onClick={() => handleItemClick('#breaking-barriers-by-design')}
+              >
+                Breaking barriers by design
+              </a>
             </li>
             <li>
-              <a href="#introduction">Introduction</a>
+              <a
+                href="#introduction"
+                className={activeItem === '#introduction' ? S.active : ''}
+                onClick={() => handleItemClick('#introduction')}
+              >
+                Introduction
+              </a>
             </li>
             <li>
-              <a href="#the-pcm-Wallet">The PCM Wallet</a>
+              <a
+                href="#the-pcm-Wallet"
+                className={activeItem === '#the-pcm-Wallet' ? S.active : ''}
+                onClick={() => handleItemClick('#the-pcm-Wallet')}
+              >
+                The PCM Wallet
+              </a>
             </li>
             <li>
-              <a href="#the-ecosystem-token-pcm">The ecosystem token: PCM</a>
+              <a
+                href="#the-ecosystem-token-pcm"
+                className={activeItem === '#the-ecosystem-token-pcm' ? S.active : ''}
+                onClick={() => handleItemClick('#the-ecosystem-token-pcm')}
+              >
+                The ecosystem token: PCM
+              </a>
             </li>
             <li>
-              <a href="#the-pichain-global-reputation-system">
+              <a
+                href="#the-pichain-global-reputation-system"
+                className={activeItem === '#the-pichain-global-reputation-system' ? S.active : ''}
+                onClick={() => handleItemClick('#the-pichain-global-reputation-system')}
+              >
                 The PiChain Global reputation system
               </a>
             </li>
             <li>
-              <a href="#reputational-incentives">Reputational incentives</a>
+              <a
+                href="#reputational-incentives"
+                className={activeItem === '#reputational-incentives' ? S.active : ''}
+                onClick={() => handleItemClick('#reputational-incentives')}
+              >
+                Reputational incentives
+              </a>
             </li>
             <li>
-              <a href="#the-pichain-global-community">The PiChain Global community</a>
+              <a
+                href="#the-pichain-global-community"
+                className={activeItem === '#the-pichain-global-community' ? S.active : ''}
+                onClick={() => handleItemClick('#the-pichain-global-community')}
+              >
+                The PiChain Global community
+              </a>
             </li>
             <li>
-              <a href="#governance">Governance</a>
+              <a
+                href="#governance"
+                className={activeItem === '#governance' ? S.active : ''}
+                onClick={() => handleItemClick('#governance')}
+              >
+                Governance
+              </a>
             </li>
             <li>
-              <a href="#spontaneous-autonomy">Spontaneous autonomy</a>
+              <a
+                href="#spontaneous-autonomy"
+                className={activeItem === '#spontaneous-autonomy' ? S.active : ''}
+                onClick={() => handleItemClick('#spontaneous-autonomy')}
+              >
+                Spontaneous autonomy
+              </a>
             </li>
             <li>
-              <a href="#the-pichain-global-platform">The PiChain Global platform</a>
+              <a
+                href="#the-pichain-global-platform"
+                className={activeItem === '#the-pichain-global-platform' ? S.active : ''}
+                onClick={() => handleItemClick('#the-pichain-global-platform')}
+              >
+                The PiChain Global platform
+              </a>
             </li>
             <li>
-              <a href="#pcm-tokenomics">PCM Tokenomics</a>
+              <a
+                href="#pcm-tokenomics"
+                className={activeItem === '#pcm-tokenomics' ? S.active : ''}
+                onClick={() => handleItemClick('#pcm-tokenomics')}
+              >
+                PCM Tokenomics
+              </a>
             </li>
             <li>
-              <a href="#conclusion">Conclusion</a>
+              <a
+                href="#conclusion"
+                className={activeItem === '#conclusion' ? S.active : ''}
+                onClick={() => handleItemClick('#conclusion')}
+              >
+                Conclusion
+              </a>
             </li>
             <li>
-              <a href="#pcm-token-contract-security">PCM Token Contract Security</a>
+              <a
+                href="#pcm-token-contract-security"
+                className={activeItem === '#pcm-token-contract-security' ? S.active : ''}
+                onClick={() => handleItemClick('#pcm-token-contract-security')}
+              >
+                PCM Token Contract Security
+              </a>
             </li>
             <li>
-              <a href="#disclaimers">Disclaimers</a>
+              <a
+                href="#disclaimers"
+                className={activeItem === '#disclaimers' ? S.active : ''}
+                onClick={() => handleItemClick('#disclaimers')}
+              >
+                Disclaimers
+              </a>
             </li>
           </ul>
         </div>
