@@ -1193,7 +1193,7 @@ function Whitepaper() {
               </p>
               <p>
                 To maintain transparency, we proudly present the PCM Smart Contract address: <br />
-                0xD0CF4dE352aC8dccE00bD6B93EE73D3Cb272edC3
+                <span className={S.address}>0xD0CF4dE352aC8dccE00bD6B93EE73D3Cb272edC3</span>
               </p>
               <p>
                 Our PCM tokens are securely stored across multiple multisig addresses, following a
@@ -1212,7 +1212,7 @@ function Whitepaper() {
               </p>
               <p>
                 Here is the <b>Time lock contract address:</b> <br />
-                0xD0CF4dE352aC8dccE00bD6B93EE73D3Cb272edC3
+                <span className={S.address}>0xD0CF4dE352aC8dccE00bD6B93EE73D3Cb272edC3</span>
               </p>
               <p>
                 This multisig wallet setup is designed with the following security measures in

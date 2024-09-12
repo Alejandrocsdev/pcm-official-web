@@ -152,6 +152,11 @@
   border: 1px solid #FF8600;
 }
 
+.address {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
 @media (max-width: 1500px) {
   .main {
     padding: 118px 50px 0 50px;
