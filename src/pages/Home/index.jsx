@@ -10,6 +10,7 @@ function Home() {
       <main className={S.main}>
         <div>Home</div>
         <Link to='/test'>Go to Test</Link>
+        <iframe className={S.zoom} src="https://www.youtube.com/embed/Tiexp3WPYEE" allowFullScreen></iframe>
       </main>
     </>
   )

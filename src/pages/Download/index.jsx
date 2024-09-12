@@ -1,11 +1,7 @@
 // 模組樣式
 import S from './style.module.css'
-// Font Awesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlassPlus, faMagnifyingGlassMinus } from '@fortawesome/free-solid-svg-icons'
 // 鉤子函式
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
 // PNG 圖檔
 import download_png from '../../assets/img/download/download.png'
 import android_download_png from '../../assets/img/download/android_download.png'

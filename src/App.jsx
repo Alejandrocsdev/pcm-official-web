@@ -11,6 +11,7 @@ import Home from './pages/Home'
 import Test from './pages/Test'
 import NFT from './pages/NFT'
 import Download from './pages/Download'
+import Whitepaper from './pages/Whitepaper'
 import ServiceTerms from './pages/ServiceTerms'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import CookiePolicy from './pages/CookiePolicy'
@@ -32,6 +33,7 @@ function App() {
             <Route path="/test" element={<Test />} />
             <Route path="/nft" element={<NFT />} />
             <Route path="/download" element={<Download />} />
+            <Route path="/whitepaper" element={<Whitepaper />} />
 
             {/* 錯誤路由 */}
             <Route path="*" element={<NotFound />} />
