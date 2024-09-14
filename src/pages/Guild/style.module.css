@@ -232,6 +232,10 @@
     margin: auto 0;
   }
 
+  .section1 .left h1 {
+    font-size: 36px;
+  }
+
   .section1 .right .about {
     width: 450px;
     height: 450px;
@@ -246,6 +250,10 @@
   .section1 .left {
     width: 500px;
     margin: auto 0;
+  }
+
+  .section1 .left h1 {
+    font-size: 32px;
   }
 
   .section1 .right .about {
@@ -281,7 +289,7 @@
   }
 
   .section1 .left h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
   
   .section1 .left p {
@@ -293,7 +301,7 @@
   }
   
   .section1 .left .members div h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
   
   .section1 .left .members div div {
@@ -308,11 +316,11 @@
   }
 
   .section1 .left {
-    width: 350px;
+    width: 360px;
   }
 
   .section1 .left h1 {
-    font-size: 32px;
+    font-size: 24px;
   }
   
   .section1 .left p {
