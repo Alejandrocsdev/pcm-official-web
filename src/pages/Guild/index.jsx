@@ -16,7 +16,6 @@ function Guild() {
       <main className={S.main}>
         <section className={S.section1}>
           <div className={S.left}>
-            <div className={S.tag}>About Us</div>
             <h1>Vision and Goal of PCM Guild:</h1>
             <p>
               PCM Guild envisions a thriving, interconnected community within the PiChain Global
@@ -45,7 +44,6 @@ function Guild() {
             <img className={S.about} src={about2_png} />
           </div>
           <div className={S.right}>
-            <div className={S.tag}>Why PCM Guild?</div>
             <h1>PCM Guild: Fostering Community-Led Innovation</h1>
             <p>
               PCM Guild serves as a catalyst for community-led innovation within the PiChain Global
@@ -105,40 +103,40 @@ function Guild() {
             Explore these roles, contribute your skills, and become an integral part of PCM Guild.
           </p>
           <div className={S.cards}>
-            <div>
-              <div>Community Manager</div>
+            <div className={S.card}>
+              <h1>Community Manager</h1>
               <div>
                 Ensure the smooth functioning of the community by coordinating daily operations.
                 From organizing events to building and maintaining relationships, community managers
                 play a pivotal role.
               </div>
             </div>
-            <div>
-              <div>Social Media Team</div>
+            <div className={S.card}>
+              <h1>Social Media Team</h1>
               <div>
                 Expand the community's reach and visibility on various platforms. Manage official
                 social media accounts, share updates, and engage with community members through
                 meaningful interactions.
               </div>
             </div>
-            <div>
-              <div>Content Creation Team</div>
+            <div className={S.card}>
+              <h1>Content Creation Team</h1>
               <div>
                 An inclusive role open to all community members. Contribute to development, design,
                 content creation, and event organization. Recognitions and rewards are facilitated
                 through community governance.
               </div>
             </div>
-            <div>
-              <div>Education and Training Team</div>
+            <div className={S.card}>
+              <h1>Education and Training Team</h1>
               <div>
                 Empower community members with knowledge on Web3 technology and the decentralized
                 ecosystem. Organize online courses, seminars, and workshops to promote the practical
                 application of Web3 technology.
               </div>
             </div>
-            <div>
-              <div>Community Maintenance Team</div>
+            <div className={S.card}>
+              <h1>Community Maintenance Team</h1>
               <div>
                 Facilitate communication and interaction among community members. Manage various
                 online social media groups, record community feedback, and contribute to education
@@ -179,11 +177,9 @@ function Guild() {
                 innovation in the decentralized world.
               </li>
             </ul>
-            <button>Read More</button>
           </div>
         </section>
         <section className={S.section5}>
-          <div>Join Us</div>
           <h1>PCM Guild Committee Application Requirements:</h1>
           <p>
             Embark on a rewarding journey by joining PCM Guild! We're seeking passionate individuals
@@ -227,8 +223,7 @@ function Guild() {
               community-driven innovation!
             </li>
           </ul>
-          <hr />
-          <button>Apply now</button>
+          <Link className={S.apply} to="https://forms.gle/kB4RfYCWxZRwfvaM6" target="blank">Apply now</Link>
         </section>
       </main>
     </>
