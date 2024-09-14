@@ -12,6 +12,8 @@ import Test from './pages/Test'
 import NFT from './pages/NFT'
 import Download from './pages/Download'
 import Whitepaper from './pages/Whitepaper'
+import Dapps from './pages/Dapps'
+import Guild from './pages/Guild'
 import ServiceTerms from './pages/ServiceTerms'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import CookiePolicy from './pages/CookiePolicy'
@@ -31,9 +33,11 @@ function App() {
           <Route path="/" element={<Layout isOpen={isMobileMenuOpen} toggleMenu={toggleMenu} />}>
             <Route index element={<Home />} />
             <Route path="/test" element={<Test />} />
-            <Route path="/nft" element={<NFT />} />
+            <Route path="/dapps/nft" element={<NFT />} />
             <Route path="/download" element={<Download />} />
             <Route path="/whitepaper" element={<Whitepaper />} />
+            <Route path="/dapps" element={<Dapps />} />
+            <Route path="/guild" element={<Guild />} />
 
             {/* 錯誤路由 */}
             <Route path="*" element={<NotFound />} />

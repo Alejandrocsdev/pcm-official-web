@@ -101,9 +101,6 @@ function Header({ isOpen, toggleMenu }) {
                       <li>
                         <Link to="/roadmap">Roadmap</Link>
                       </li>
-                      <li>
-                        <Link to="/blog">Blog</Link>
-                      </li>
                     </ul>
                   </div>
                 </div>
