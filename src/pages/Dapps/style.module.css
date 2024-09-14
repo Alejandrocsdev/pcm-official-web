@@ -74,3 +74,28 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 500px) {
+  .main {
+    min-height: 110vh;
+  }
+
+  .container {
+    gap: 20px;
+    min-height: calc(110vh - 88px);
+    flex-direction: column;
+  }
+
+  .nftImg,
+  .mallImg {
+    width: 250px;
+  }
+
+  .nft:hover .nftImg {
+    width: 300px;
+  }
+  
+  .mall:hover .mallImg {
+    width: 300px;
+  }
+}
