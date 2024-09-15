@@ -418,6 +418,10 @@
   .section4 .right {
     width: 500px;
   }
+
+  .section5 {
+    padding: 40px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -477,6 +481,10 @@
 
   .section4 .right {
     width: 400px;
+  }
+
+  .section5 {
+    padding: 40px 20px;
   }
 }
 
