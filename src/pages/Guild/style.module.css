@@ -75,7 +75,7 @@
   margin: 0;
 }
 
-.section2.communities {
+.section2 .communities {
   margin-top: 20px;
 }
 
@@ -240,6 +240,31 @@
     width: 450px;
     height: 450px;
   }
+
+  .section2 {
+    padding: 0 40px;
+  }
+
+  .section2 .left .about {
+    width: 350px;
+    height: 350px;
+  }
+
+  .section2 .right h1 {
+    font-size: 36px;
+  }
+
+  .section2 .right p {
+    line-height: 20px;
+  }
+
+  .section2 .community .content p {
+    line-height: 20px;
+  }
+
+  .icon {
+    width: 50px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -260,6 +285,25 @@
     width: 400px;
     height: 400px;
   }
+
+  .section2 {
+    padding: 0 20px;
+  }
+
+  .section2 .left .about {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .section2 .right h1 {
+    margin: 10px 0;
+    font-size: 32px;
+  }
+  
+  .section2 .community .content p {
+    margin: 10px 0;
+    line-height: 20px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -276,12 +320,25 @@
   .section1 .right {
     order: 1;
   }
+
+  .section2 {
+    padding: 40px;
+    flex-direction: column;
+  }
+  
+  .section2 .left .about {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .section2 .right h1 {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 700px) {
   .section1 {
     padding: 20px 0 40px 0;
-    flex-direction: column;
   }
 
   .section1 .left {
@@ -291,28 +348,44 @@
   .section1 .left h1 {
     font-size: 28px;
   }
-  
+
   .section1 .left p {
     line-height: 24px;
   }
-  
+
   .section1 .left .members {
     gap: 20px;
   }
-  
+
   .section1 .left .members div h1 {
     font-size: 28px;
   }
-  
+
   .section1 .left .members div div {
     font-size: 18px;
+  }
+
+  .section2 {
+    padding: 40px 0;
+  }
+  
+  .section2 .left .about {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .section2 .right {
+    width: 450px;
+  }
+  
+  .section2 .right h1 {
+    font-size: 28px;
   }
 }
 
 @media (max-width: 500px) {
   .section1 {
     padding: 15px 0 20px 0;
-    flex-direction: column;
   }
 
   .section1 .left {
@@ -322,19 +395,19 @@
   .section1 .left h1 {
     font-size: 24px;
   }
-  
+
   .section1 .left p {
     line-height: 24px;
   }
-  
+
   .section1 .left .members {
     gap: 10px;
   }
-  
+
   .section1 .left .members div h1 {
     font-size: 32px;
   }
-  
+
   .section1 .left .members div div {
     font-size: 16px;
   }
@@ -342,5 +415,9 @@
   .section1 .right .about {
     width: 300px;
     height: 300px;
+  }
+
+  .section2 .right {
+    width: 360px;
   }
 }
